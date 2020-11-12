@@ -1,0 +1,18 @@
+# IPython Notebook
+.ipynb_checkpoints
+
+# The Data Directory
+Data_directory/
+
+# Model Directory
+Model_dir/
+
+*.pyc
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+
+Utils/__pycache__/
+models/__pycache__/
