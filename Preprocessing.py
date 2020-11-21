@@ -55,13 +55,17 @@ if __name__ == '__main__':
     train_df_ids = unique_ids[:int(len(unique_ids)*0.8)]
     valid_df_ids = unique_ids[int(len(unique_ids)*0.8):]
 
-    print(len(train_df_ids))
-    print(len(valid_df_ids))
-
+    # Final Training and Testing dataframes  
     train_df = df.loc[df['image_id'].isin(train_df_ids)]
     valid_df = df.loc[df['image_id'].isin(valid_df_ids)]
-    print(train_df.shape)
-    print(valid_df.shape)
+    
+    # Saving the dataframes as csv for later access in Preprocessing
+    train_df.to_csv('./Preprocessing/train_df.csv', index=False)
+    valid_df.to_csv('./Preprocessing/valid_df.csv', index=False)
+
+
+
+
 
 
 
